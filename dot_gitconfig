@@ -1,0 +1,15 @@
+[user]
+	email = 731499577@qq.com
+	name = felinae98
+	signingkey = A531140D1269FC17AC3E678500C8B010587FF610
+[commit]
+	gpgsign = true
+[core]
+	quotepath = false
+[url "ssh://git@github.com"]
+	insteadOf = https://github.com
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f

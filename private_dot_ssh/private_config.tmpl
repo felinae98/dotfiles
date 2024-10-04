@@ -1,0 +1,15 @@
+Include config.d/*
+
+Host aur.archlinux.org
+  IdentityFile ~/.ssh/aur
+  User aur
+
+Host github.com
+  User git
+{{- if .proxy }}
+  HostName github.com
+  ProxyCommand nc -v -x 127.0.0.1:7893 %h %p
+{{- else }}
+  HostName 20.200.245.248
+  Port 443
+{{- end }}

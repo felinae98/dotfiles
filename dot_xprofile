@@ -1,0 +1,12 @@
+export LANG=zh_CN.UTF-8
+export LANGUAGE=zh_CN:en_US
+export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true'
+export ANDROID_SDK_ROOT="$HOME/Android/Sdk"
+export ANDROID_HOME=$ANDROID_SDK_ROOT
+export ANDROID_AVD_HOME="$HOME/.android/avd"
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS="@im=fcitx"
+export INPUT_METHOD=fcitx
+export SDL_IM_MODULE=fcitx
+export DEEPIN_WINE_SCALE=1.5

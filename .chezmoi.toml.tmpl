@@ -1,0 +1,7 @@
+{{- $proxy :=  promptBoolOnce . "proxy" "use behind proxy" -}}
+
+[data]
+  proxy = {{ $proxy }}
+[git]
+    autoCommit = true
+    autoPush = true
