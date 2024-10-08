@@ -1,0 +1,33 @@
+{{ if eq .chezmoi.os "darwin" -}}
+#!/bin/bash
+
+set -eufo pipefail
+
+{{ $brews := list
+     "curl"
+     "fd"
+     "git"
+     "gnupg"
+     "jq"
+     "node"
+     "pinentry-mac"
+     "autojump"
+     "ripgrep"
+     "tmux"
+     "entr"
+     "wget" -}}
+{{ $casks := list
+     "spotify"
+     "tailscale"
+     "telegram"
+     "kitty" -}}
+
+brew bundle --no-lock --file=/dev/stdin <<EOF
+{{ range ($brews | sortAlpha | uniq) -}}
+brew "{{ . }}"
+{{ end -}}
+{{ range ($casks | sortAlpha | uniq) -}}
+cask "{{ . }}"
+{{ end -}}
+EOF
+{{ end -}}

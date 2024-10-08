@@ -62,6 +62,7 @@ zmodule ohmyzsh/ohmyzsh --source lib/git.zsh
 zmodule ohmyzsh/ohmyzsh --root plugins/git
 zmodule ohmyzsh/ohmyzsh --source lib/clipboard.zsh
 zmodule ohmyzsh/ohmyzsh --root plugins/copyfile
+zmodule ohmyzsh/ohmyzsh --root plugins/autojump
 
 
 zmodule juanrgon/yadm-zsh
