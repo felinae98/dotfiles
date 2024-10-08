@@ -64,7 +64,6 @@ zmodule ohmyzsh/ohmyzsh --root plugins/copyfile
 zmodule ohmyzsh/ohmyzsh --root plugins/autojump
 
 
-zmodule juanrgon/yadm-zsh
 zmodule joke/zim-kubectl
 zmodule joke/zim-k9s
 zmodule joke/zim-helm
