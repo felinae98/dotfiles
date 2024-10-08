@@ -56,7 +56,6 @@ zmodule zsh-users/zsh-autosuggestions
 # }}} End configuration added by Zim install
 
 zmodule pacman
-zmodule fasd
 zmodule ohmyzsh/ohmyzsh --root plugins/systemd
 zmodule ohmyzsh/ohmyzsh --source lib/git.zsh
 zmodule ohmyzsh/ohmyzsh --root plugins/git
