@@ -3,6 +3,7 @@
 {{ if eq .chezmoi.username "root" -}}
 {{   $sudo = "" -}}
 {{ end -}}
+#!/bin/bash
 setup_archlinuxcn() {
     if cat /etc/pacman.conf | grep archlinuxcn 1>/dev/null 2>/dev/null; then
         return 0
