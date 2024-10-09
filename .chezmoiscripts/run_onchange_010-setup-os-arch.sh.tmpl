@@ -1,0 +1,27 @@
+{{ if eq .osid "linux-arch" -}}
+{{ $sudo := "sudo " -}}
+{{ if eq .chezmoi.username "root" -}}
+{{   $sudo = "" -}}
+{{ end -}}
+setup_archlinuxcn() {
+    if cat /etc/pacman.conf | grep archlinuxcn 1>/dev/null 2>/dev/null; then
+        return 0
+    fi
+    cat << EOF | sudo tee -a /etc/pacman.conf > /dev/null
+
+[archlinuxcn]
+Server = https://mirrors.ustc.edu.cn/archlinuxcn/\$arch
+EOF
+    {{ $sudo }}pacman -Sy --noconfirm archlinuxcn-keyring
+}
+
+setup_yay() {
+    if ! command -v yay; then
+        return 0
+    fi
+    {{ $sudo }}pacman -Sy --noconfirm yay
+}
+
+setup_archlinuxcn
+setup_yay
+{{ end -}}

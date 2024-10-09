@@ -1,0 +1,16 @@
+{{ if eq .chezmoi.os "darwin" -}}
+{{ $sudo := "sudo " -}}
+{{ if eq .chezmoi.username "root" -}}
+{{   $sudo = "" -}}
+{{ end -}}
+#!/bin/bash
+setup_homebrew() {
+    if ! command -v brew >/dev/null ; then
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    else
+        echo "brew already installed, skip"
+    fi
+}
+
+setup_homebrew
+{{ end -}}

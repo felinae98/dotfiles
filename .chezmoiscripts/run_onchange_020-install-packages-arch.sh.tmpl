@@ -1,0 +1,22 @@
+{{ if eq .osid "linux-arch" -}}
+{{ $packages := list
+  "neovim"
+  "tmux"
+  "zsh"
+  "yarn"
+  "npm"
+  "ripgrep"
+  "fd"
+  "autojump"
+  "gpg"
+  "entr" -}}
+{{ $sudo := "sudo " -}}
+{{ if eq .chezmoi.username "root" -}}
+{{   $sudo = "" -}}
+{{ end -}}
+#!/bin/bash
+
+set -eufo pipefail
+
+{{ $sudo }} pacman -S --needed --noconfirm {{ $packages | join "" }}
+{{ end -}}
