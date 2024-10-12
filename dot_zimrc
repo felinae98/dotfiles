@@ -75,3 +75,4 @@ zmodule ptavares/zsh-kubectx
 # zmodule chmouel/kubectl-config-switcher
 zmodule yhlooo/zsh-kubeconfig-mgr
 zmodule joke/zim-chezmoi
+zmodule wintermi/zsh-mise
