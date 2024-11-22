@@ -18,6 +18,7 @@ return {
   -- { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.colorscheme.neosolarized-nvim" },
   { import = "astrocommunity.colorscheme.solarized-osaka-nvim" },
+  { import = "astrocommunity.completion.codeium-nvim" },
   { import = "astrocommunity.editing-support.suda-vim" },
   { import = "astrocommunity.git.diffview-nvim" },
   { import = "astrocommunity.git.neogit" },
