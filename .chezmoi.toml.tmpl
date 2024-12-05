@@ -4,14 +4,16 @@
 {{-   $osid = printf "%s-%s" .chezmoi.os .chezmoi.osRelease.id -}}
 {{- end -}}
 
+encryption = "age"
+
 [data]
-  proxy = {{ $proxy }}
-  osid = {{ $osid | quote }}
+    proxy = {{ $proxy }}
+    osid = {{ $osid | quote }}
+
 [git]
     autoCommit = true
     autoPush = false
 
-encryption = "age"
 [age]
     identity = "~/.config/chezmoi/key.txt"
     recipient = "age16vran5zuzp5u8tk6hmj6kckdj52t90cvg96f4p8c8jfynrppeqrszgdlx6"
