@@ -10,8 +10,8 @@ return {
 	opts = {
 		-- Configuration table of features provided by AstroLSP
 		features = {
-			autoformat = true, -- enable or disable auto formatting on start
-			codelens = true, -- enable/disable codelens refresh on start
+			autoformat = true,   -- enable or disable auto formatting on start
+			codelens = true,     -- enable/disable codelens refresh on start
 			inlay_hints = false, -- enable/disable inlay hints on start
 			semantic_tokens = true, -- enable/disable semantic token highlighting
 		},
@@ -113,7 +113,7 @@ return {
 				--   desc = "Toggle LSP semantic highlight (buffer)",
 				--   cond = function(client) return client.server_capabilities.semanticTokensProvider and vim.lsp.semantic_tokens end,
 				-- },
-				lr = { ":LspRestart<cr>", desc = "Restart LSP client" },
+				["<leader>le"] = { ":LspRestart<cr>", desc = "Restart LSP client" },
 			},
 		},
 		-- A custom `on_attach` function to be run after the default `on_attach` function
