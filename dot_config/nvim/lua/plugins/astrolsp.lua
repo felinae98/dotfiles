@@ -10,8 +10,8 @@ return {
   opts = {
     -- Configuration table of features provided by AstroLSP
     features = {
-      autoformat = true, -- enable or disable auto formatting on start
-      codelens = true, -- enable/disable codelens refresh on start
+      autoformat = true,   -- enable or disable auto formatting on start
+      codelens = true,     -- enable/disable codelens refresh on start
       inlay_hints = false, -- enable/disable inlay hints on start
       semantic_tokens = true, -- enable/disable semantic token highlighting
     },
@@ -80,19 +80,28 @@ return {
           event = { "CursorHold", "CursorHoldI" },
           -- the rest of the autocmd options (:h nvim_create_autocmd)
           desc = "Document Highlighting",
-          callback = function() vim.lsp.buf.document_highlight() end,
+          callback = function()
+            vim.lsp.buf.document_highlight()
+          end,
         },
         {
           event = { "CursorMoved", "CursorMovedI", "BufLeave" },
           desc = "Document Highlighting Clear",
-          callback = function() vim.lsp.buf.clear_references() end,
+          callback = function()
+            vim.lsp.buf.clear_references()
+          end,
         },
       },
     },
     -- mappings to be set up on attaching of a language server
     mappings = {
       n = {
-        gl = { function() vim.diagnostic.open_float() end, desc = "Hover diagnostics" },
+        gl = {
+          function()
+            vim.diagnostic.open_float()
+          end,
+          desc = "Hover diagnostics",
+        },
         -- a `cond` key can provided as the string of a server capability to be required to attach, or a function with `client` and `bufnr` parameters from the `on_attach` that returns a boolean
         -- gD = {
         --   function() vim.lsp.buf.declaration() end,
@@ -104,6 +113,7 @@ return {
         --   desc = "Toggle LSP semantic highlight (buffer)",
         --   cond = function(client) return client.server_capabilities.semanticTokensProvider and vim.lsp.semantic_tokens end,
         -- },
+        lr = { "LspRestart", desc = "Restart LSP client" },
       },
     },
     -- A custom `on_attach` function to be run after the default `on_attach` function
