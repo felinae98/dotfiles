@@ -31,12 +31,14 @@ return {
         signcolumn = "auto", -- sets vim.opt.signcolumn to auto
         wrap = true, -- sets vim.opt.wrap
         scrolloff = 5,
-        guifont = "Ubuntu Nerd Font:h14",
+        guifont = "UbuntuMono Nerd Font Mono:h14",
+        termguicolors = true,
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
         -- NOTE: `mapleader` and `maplocalleader` must be set in the AstroNvim opts or before `lazy.setup`
         -- This can be found in the `lua/lazy_setup.lua` file
+        neovide_input_macos_alt_is_meta = true,
       },
     },
     -- Mappings can be configured through AstroCore as well.

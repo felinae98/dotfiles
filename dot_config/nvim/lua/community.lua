@@ -18,6 +18,12 @@ return {
   -- { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.colorscheme.neosolarized-nvim" },
   { import = "astrocommunity.colorscheme.solarized-osaka-nvim" },
+  {
+    "craftzdog/solarized-osaka.nvim",
+    opts = {
+      transparent = false,
+    },
+  },
   -- { import = "astrocommunity.completion.codeium-nvim" },
   { import = "astrocommunity.completion.copilot-lua" },
   {
