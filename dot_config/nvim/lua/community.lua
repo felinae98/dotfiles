@@ -2,16 +2,6 @@
 -- We import this file in `lazy_setup.lua` before the `plugins/` folder.
 -- This guarantees that the specs are processed before any user plugins.
 
-function remove_from_list(list, value)
-	for i = #list, 1, -1 do
-		if list[i] == value then
-			table.remove(list, i)
-		end
-	end
-
-	return list
-end
-
 ---@type LazySpec
 return {
 	"AstroNvim/astrocommunity",
