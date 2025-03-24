@@ -43,6 +43,7 @@ return {
 	{ import = "astrocommunity.pack.json" },
 	{ import = "astrocommunity.pack.go" },
 	{ import = "astrocommunity.pack.python-ruff" },
+	{ import = "astrocommunity.pack.vue" },
 	{ import = "astrocommunity.pack.typescript-all-in-one" },
 	{ import = "astrocommunity.pack.yaml" },
 	{ import = "astrocommunity.recipes.telescope-lsp-mappings" },
