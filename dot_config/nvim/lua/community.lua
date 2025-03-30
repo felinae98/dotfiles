@@ -4,72 +4,60 @@
 
 ---@type LazySpec
 return {
-	"AstroNvim/astrocommunity",
-	{ import = "astrocommunity.pack.lua" },
-	-- import/override with your plugins folder
-	-- { import = "astrocommunity.colorscheme.catppuccin" },
-	{ import = "astrocommunity.colorscheme.neosolarized-nvim" },
-	{ import = "astrocommunity.colorscheme.solarized-osaka-nvim" },
-	{
-		"craftzdog/solarized-osaka.nvim",
-		opts = {
-			transparent = false,
-		},
-	},
-	-- { import = "astrocommunity.completion.codeium-nvim" },
-	{ import = "astrocommunity.completion.copilot-lua" },
-	{ import = "astrocommunity.completion.avante-nvim" },
-	-- {
-	-- 	"yetone/avante.nvim",
-	-- 	opts = {
-	-- 		provider = "deepseek",
-	-- 		vendors = {
-	-- 			deepseek = {
-	-- 				__inherited_from = "openai",
-	-- 				api_key_name = "DEEPSEEK_API_KEY",
-	-- 				endpoint = "https://api.deepseek.com",
-	-- 				model = "deepseek-chat",
-	-- 			},
-	-- 		},
-	-- 	},
-	-- },
-	{ import = "astrocommunity.editing-support.suda-vim" },
-	{ import = "astrocommunity.git.diffview-nvim" },
-	{ import = "astrocommunity.git.neogit" },
-	{ import = "astrocommunity.git.octo-nvim" },
-	{ import = "astrocommunity.git.blame-nvim" },
-	{ import = "astrocommunity.motion.flash-nvim" },
-	{ import = "astrocommunity.pack.helm" },
-	{ import = "astrocommunity.pack.json" },
-	{ import = "astrocommunity.pack.go" },
-	{ import = "astrocommunity.pack.python-ruff" },
-	{ import = "astrocommunity.pack.vue" },
-	{ import = "astrocommunity.pack.typescript-all-in-one" },
-	{ import = "astrocommunity.pack.yaml" },
-	{ import = "astrocommunity.recipes.telescope-lsp-mappings" },
-	{ import = "astrocommunity.search.nvim-hlslens" },
-	{ import = "astrocommunity.search.nvim-spectre" },
-	{ import = "astrocommunity.scrolling.nvim-scrollbar" },
-	-- { import = "astrocommunity.split-and-window.edgy-nvim" },
-	{ import = "astrocommunity.split-and-window.mini-map" },
-	-- { import = "astrocommunity.split-and-window.windows-nvim" },
-	{ import = "astrocommunity.syntax.vim-sandwich" },
-	{ import = "astrocommunity.utility.telescope-live-grep-args-nvim" },
-	{
-		"AstroNvim/astrocore",
-		---@type AstroCoreOpts
-		opts = {
-			mappings = {
-				n = {
-					["<Leader>fw"] = {
-						function()
-							require("telescope").extensions.live_grep_args.live_grep_args()
-						end,
-						desc = "live grep (with args)",
-					},
-				},
-			},
-		},
-	},
-	{ import = "astrocommunity.workflow.hardtime-nvim" },
+  "AstroNvim/astrocommunity",
+  { import = "astrocommunity.pack.lua" },
+  -- import/override with your plugins folder
+  -- { import = "astrocommunity.colorscheme.catppuccin" },
+  { import = "astrocommunity.colorscheme.neosolarized-nvim" },
+  { import = "astrocommunity.colorscheme.solarized-osaka-nvim" },
+  {
+    "craftzdog/solarized-osaka.nvim",
+    opts = {
+      transparent = false,
+    },
+  },
+  { import = "astrocommunity.completion.copilot-lua" },
+  { import = "astrocommunity.completion.avante-nvim" },
+  {
+    "yetone/avante.nvim",
+    opts = {
+      provider = "openrouter",
+      vendors = {
+        deepseek = {
+          __inherited_from = "openai",
+          api_key_name = "DEEPSEEK_API_KEY",
+          endpoint = "https://api.deepseek.com",
+          model = "deepseek-chat",
+        },
+        openrouter = {
+          __inherited_from = "openai",
+          endpoint = "https://openrouter.ai/api/v1",
+          api_key_name = "OPENROUTER_API_KEY",
+          model = "deepseek/deepseek-chat-v3-0324:free",
+        },
+      },
+    },
+  },
+  { import = "astrocommunity.editing-support.suda-vim" },
+  { import = "astrocommunity.git.diffview-nvim" },
+  { import = "astrocommunity.git.neogit" },
+  { import = "astrocommunity.git.octo-nvim" },
+  { import = "astrocommunity.git.blame-nvim" },
+  { import = "astrocommunity.motion.flash-nvim" },
+  { import = "astrocommunity.pack.helm" },
+  { import = "astrocommunity.pack.json" },
+  { import = "astrocommunity.pack.go" },
+  { import = "astrocommunity.pack.python-ruff" },
+  { import = "astrocommunity.pack.vue" },
+  { import = "astrocommunity.pack.typescript-all-in-one" },
+  { import = "astrocommunity.pack.yaml" },
+  { import = "astrocommunity.pack.chezmoi" },
+  { import = "astrocommunity.recipes.telescope-lsp-mappings" },
+  { import = "astrocommunity.recipes.neovide" },
+  { import = "astrocommunity.recipes.auto-session-restore" },
+  { import = "astrocommunity.search.nvim-hlslens" },
+  { import = "astrocommunity.search.nvim-spectre" },
+  { import = "astrocommunity.scrolling.nvim-scrollbar" },
+  { import = "astrocommunity.split-and-window.mini-map" },
+  { import = "astrocommunity.syntax.vim-sandwich" },
 }
