@@ -28,6 +28,7 @@ return {
 					api_key_name = "DEEPSEEK_API_KEY",
 					endpoint = "https://api.deepseek.com",
 					model = "deepseek-chat",
+					max_tokens = 4096,
 				},
 				openrouter = {
 					__inherited_from = "openai",
