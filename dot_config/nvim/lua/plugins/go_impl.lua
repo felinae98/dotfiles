@@ -1,5 +1,3 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 ---@type LazySpec
 return {
   "edolphin-ydf/goimpl.nvim",
@@ -12,7 +10,9 @@ return {
         { "nvim-lua/popup.nvim" },
         { "nvim-treesitter/nvim-treesitter" },
       },
-      opts = function() require("telescope").load_extension "goimpl" end,
+      opts = function()
+        require("telescope").load_extension("goimpl")
+      end,
     },
   },
 }
