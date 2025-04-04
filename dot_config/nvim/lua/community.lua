@@ -53,7 +53,7 @@ return {
 	{ import = "astrocommunity.pack.typescript-all-in-one" },
 	{ import = "astrocommunity.pack.yaml" },
 	{ import = "astrocommunity.pack.chezmoi" },
-	{ import = "astrocommunity.recipes.telescope-lsp-mappings" },
+	{ import = "astrocommunity.recipes.picker-lsp-mappings" },
 	{ import = "astrocommunity.recipes.neovide" },
 	{ import = "astrocommunity.recipes.auto-session-restore" },
 	{ import = "astrocommunity.search.nvim-hlslens" },
