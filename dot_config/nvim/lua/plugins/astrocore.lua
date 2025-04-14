@@ -10,12 +10,12 @@ return {
   opts = {
     -- Configure core features of AstroNvim
     features = {
-      large_buf = { size = 1024 * 256, lines = 10000 }, -- set global limits for large files for disabling features like treesitter
-      autopairs = true, -- enable autopairs at start
-      cmp = true, -- enable completion at start
+      large_buf = { size = 1024 * 256, lines = 10000 },          -- set global limits for large files for disabling features like treesitter
+      autopairs = true,                                          -- enable autopairs at start
+      cmp = true,                                                -- enable completion at start
       diagnostics = { virtual_text = true, virtual_lines = false }, -- diagnostic settings on startup
-      highlighturl = true, -- highlight URLs at start
-      notifications = true, -- enable notifications at start
+      highlighturl = true,                                       -- highlight URLs at start
+      notifications = true,                                      -- enable notifications at start
     },
     -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
     diagnostics = {
@@ -24,12 +24,12 @@ return {
     },
     -- vim options can be configured here
     options = {
-      opt = { -- vim.opt.<key>
+      opt = {              -- vim.opt.<key>
         relativenumber = true, -- sets vim.opt.relativenumber
-        number = true, -- sets vim.opt.number
-        spell = false, -- sets vim.opt.spell
+        number = true,     -- sets vim.opt.number
+        spell = false,     -- sets vim.opt.spell
         signcolumn = "yes", -- sets vim.opt.signcolumn to yes
-        wrap = true, -- sets vim.opt.wrap
+        wrap = true,       -- sets vim.opt.wrap
         guifont = "UbuntuMono Nerd Font Mono:h14",
         termguicolors = true,
       },
@@ -37,7 +37,7 @@ return {
         -- configure global vim variables (vim.g)
         -- NOTE: `mapleader` and `maplocalleader` must be set in the AstroNvim opts or before `lazy.setup`
         -- This can be found in the `lua/lazy_setup.lua` file
-        neovide_input_macos_alt_is_meta = true,
+        neovide_input_macos_option_key_is_meta = true,
       },
     },
     -- Mappings can be configured through AstroCore as well.
@@ -48,22 +48,32 @@ return {
         -- second key is the lefthand side of the map
 
         -- navigate buffer tabs
-        ["]b"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
-        ["[b"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
+        ["]b"] = {
+          function()
+            require("astrocore.buffer").nav(vim.v.count1)
+          end,
+          desc = "Next buffer",
+        },
+        ["[b"] = {
+          function()
+            require("astrocore.buffer").nav(-vim.v.count1)
+          end,
+          desc = "Previous buffer",
+        },
 
         -- mappings seen under group name "Buffer"
         ["<Leader>bd"] = {
           function()
-            require("astroui.status.heirline").buffer_picker(
-              function(bufnr) require("astrocore.buffer").close(bufnr) end
-            )
+            require("astroui.status.heirline").buffer_picker(function(bufnr)
+              require("astrocore.buffer").close(bufnr)
+            end)
           end,
           desc = "Close buffer from tabline",
         },
 
         ["<esc>"] = {
           function()
-            vim.cmd "noh"
+            vim.cmd("noh")
             return "<esc>"
           end,
         },
