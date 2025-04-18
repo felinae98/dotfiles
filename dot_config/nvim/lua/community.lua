@@ -21,7 +21,7 @@ return {
 	{
 		"yetone/avante.nvim",
 		opts = {
-			provider = "openrouter",
+			provider = "deepseek",
 			vendors = {
 				deepseek = {
 					__inherited_from = "openai",
