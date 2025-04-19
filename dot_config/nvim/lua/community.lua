@@ -30,12 +30,15 @@ return {
 					model = "deepseek-chat",
 					max_tokens = 4096,
 				},
-				openrouter = {
+				dmxapi = {
 					__inherited_from = "openai",
-					endpoint = "https://openrouter.ai/api/v1",
-					api_key_name = "OPENROUTER_API_KEY",
-					model = "deepseek/deepseek-chat-v3-0324:free",
 				},
+				-- openrouter = {
+				-- 	__inherited_from = "openai",
+				-- 	endpoint = "https://openrouter.ai/api/v1",
+				-- 	api_key_name = "OPENROUTER_API_KEY",
+				-- 	model = "deepseek/deepseek-chat-v3-0324:free",
+				-- },
 			},
 		},
 	},
