@@ -32,6 +32,8 @@ return {
 				},
 				dmxapi = {
 					__inherited_from = "openai",
+					api_key_name = "DMX_API_KEY",
+					model = "gpt-4o-mini",
 				},
 				-- openrouter = {
 				-- 	__inherited_from = "openai",
