@@ -36,12 +36,12 @@ return {
 					endpoint = "https://www.dmxapi.com",
 					model = "gpt-4o-mini",
 				},
-				-- openrouter = {
-				-- 	__inherited_from = "openai",
-				-- 	endpoint = "https://openrouter.ai/api/v1",
-				-- 	api_key_name = "OPENROUTER_API_KEY",
-				-- 	model = "deepseek/deepseek-chat-v3-0324:free",
-				-- },
+				openrouter = {
+					__inherited_from = "openai",
+					endpoint = "https://openrouter.ai/api/v1",
+					api_key_name = "OPENROUTER_API_KEY",
+					model = "google/gemini-2.0-flash-001",
+				},
 			},
 		},
 	},
