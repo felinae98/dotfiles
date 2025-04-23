@@ -33,7 +33,7 @@ return {
         dmxapi = {
           __inherited_from = "openai",
           api_key_name = "DMX_API_KEY",
-          endpoint = "https://www.dmxapi.com",
+          endpoint = "https://www.dmxapi.com/v1",
           model = "gpt-4o-mini",
         },
         openrouter = {
