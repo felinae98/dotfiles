@@ -16,7 +16,8 @@ return {
       transparent = false,
     },
   },
-  { import = "astrocommunity.completion.copilot-lua" },
+  -- { import = "astrocommunity.completion.copilot-lua" },
+  { import = "astrocommunity.completion.codeium-vim" },
   { import = "astrocommunity.completion.avante-nvim" },
   {
     "yetone/avante.nvim",
