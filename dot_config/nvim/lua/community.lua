@@ -47,6 +47,7 @@ return {
     },
   },
   { import = "astrocommunity.editing-support.suda-vim" },
+  { import = "astrocommunity.editing-support.mcphub-nvim" },
   { import = "astrocommunity.git.diffview-nvim" },
   { import = "astrocommunity.git.neogit" },
   { import = "astrocommunity.git.octo-nvim" },
