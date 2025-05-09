@@ -31,11 +31,15 @@ return {
 					model = "deepseek-chat",
 					max_tokens = 4096,
 				},
-				dmxapi = {
+				["dmxapi-4o-mini"] = {
 					__inherited_from = "openai",
 					api_key_name = "DMX_API_KEY",
 					endpoint = "https://www.dmxapi.com/v1",
 					model = "gpt-4o-mini",
+				},
+				["dmxapi-claude-3.7"] = {
+					__inherited_from = "dmxapi-4o-mini",
+					model = "claude-3-7-sonnet-20250219",
 				},
 				openrouter = {
 					__inherited_from = "openai",
