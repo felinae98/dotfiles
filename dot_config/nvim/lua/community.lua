@@ -22,7 +22,7 @@ return {
 	{
 		"yetone/avante.nvim",
 		opts = {
-			provider = "dmxapi",
+			provider = "dmxapi-claude-3.7",
 			vendors = {
 				deepseek = {
 					__inherited_from = "openai",
