@@ -22,7 +22,10 @@ return {
 	{
 		"yetone/avante.nvim",
 		opts = {
-			provider = "dmxapi-claude-3.7",
+			provider = "aihubmix",
+			aihubmix = {
+				model = "claude-3-7-sonnet-20250219",
+			},
 			vendors = {
 				deepseek = {
 					__inherited_from = "openai",
