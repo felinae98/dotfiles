@@ -23,10 +23,10 @@ return {
 		"yetone/avante.nvim",
 		opts = {
 			provider = "aihubmix",
-			aihubmix = {
-				model = "claude-3-7-sonnet-20250219",
-			},
 			providers = {
+				aihubmix = {
+					model = "claude-3-7-sonnet-20250219",
+				},
 				deepseek = {
 					__inherited_from = "openai",
 					api_key_name = "DEEPSEEK_API_KEY",
