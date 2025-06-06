@@ -40,11 +40,11 @@ return {
 					endpoint = "https://www.dmxapi.com/v1",
 					model = "gpt-4o-mini",
 				},
-				["dmxapi-claude-3.7"] = {
+				["dmxapi-claude-4"] = {
 					__inherited_from = "openai",
 					api_key_name = "DMX_API_KEY",
 					endpoint = "https://www.dmxapi.com/v1",
-					model = "claude-3-7-sonnet-20250219",
+					model = "claude-sonnet-4-20250514",
 				},
 				openrouter = {
 					__inherited_from = "openai",
