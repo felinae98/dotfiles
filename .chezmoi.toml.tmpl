@@ -1,4 +1,4 @@
-{{- $proxy :=  promptBoolOnce . "proxy" "use behind proxy" -}}{{- $osid := .chezmoi.os -}}
+{{- $proxy :=  promptBoolOnce . "proxy" "use local hosted proxy" -}}{{- $osid := .chezmoi.os -}}
 
 {{- if hasKey .chezmoi.osRelease "id" -}}
 {{-   $osid = printf "%s-%s" .chezmoi.os .chezmoi.osRelease.id -}}
