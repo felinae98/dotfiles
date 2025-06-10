@@ -56,13 +56,13 @@ return {
 		},
 	},
 	{ import = "astrocommunity.editing-support.suda-vim" },
-	-- { import = "astrocommunity.editing-support.mcphub-nvim" },
-	-- {
-	-- 	"ravitemer/mcphub.nvim",
-	-- 	opts = {
-	-- 		port = 3001,
-	-- 	},
-	-- },
+	{ import = "astrocommunity.editing-support.mcphub-nvim" },
+	{
+		"ravitemer/mcphub.nvim",
+		opts = {
+			port = 3001,
+		},
+	},
 	{ import = "astrocommunity.git.diffview-nvim" },
 	{ import = "astrocommunity.git.neogit" },
 	{ import = "astrocommunity.git.octo-nvim" },
