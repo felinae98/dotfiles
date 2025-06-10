@@ -22,7 +22,7 @@ return {
 	{
 		"yetone/avante.nvim",
 		opts = {
-			provider = "dmxapi-claude-4",
+			provider = "dmxapi-4o-mini",
 			providers = {
 				aihubmix = {
 					model = "claude-3-7-sonnet-20250219",
