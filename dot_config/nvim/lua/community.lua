@@ -102,4 +102,6 @@ return {
   { import = "astrocommunity.scrolling.nvim-scrollbar" },
   { import = "astrocommunity.split-and-window.mini-map" },
   { import = "astrocommunity.syntax.vim-sandwich" },
+  { import = "astrocommunity.test.neotest" },
+  { import = "astrocommunity.test.nvim-coverage" },
 }
