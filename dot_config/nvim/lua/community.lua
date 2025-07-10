@@ -52,6 +52,12 @@ return {
 					endpoint = "https://www.dmxapi.com/v1",
 					model = "claude-sonnet-4-20250514",
 				},
+				["aiwave-gemini-2.5-pro"] = {
+					__inherited_from = "openai",
+					endpoint = "https://api.ai-wave.org/v1",
+					api_key_name = "AI_WAVE_API_KEY",
+					model = "gemini-2.5-pro",
+				},
 				openrouter = {
 					__inherited_from = "openai",
 					endpoint = "https://openrouter.ai/api/v1",
