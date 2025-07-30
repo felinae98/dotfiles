@@ -106,7 +106,6 @@ return {
   { import = "astrocommunity.recipes.ai" },
   { import = "astrocommunity.recipes.picker-lsp-mappings" },
   { import = "astrocommunity.recipes.neovide" },
-  { import = "astrocommunity.recipes.auto-session-restore" },
   { import = "astrocommunity.recipes.telescope-nvim-snacks" },
   { import = "astrocommunity.recipes.astrolsp-no-insert-inlay-hints" },
   { import = "astrocommunity.recipes.diagnostic-virtual-lines-current-line" },
