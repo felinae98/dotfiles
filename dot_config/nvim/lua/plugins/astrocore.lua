@@ -30,7 +30,7 @@ return {
         spell = false, -- sets vim.opt.spell
         signcolumn = "yes", -- sets vim.opt.signcolumn to yes
         wrap = true, -- sets vim.opt.wrap
-        guifont = "UbuntuMono Nerd Font Mono:h14",
+        guifont = "FiraCode Nerd Font:h12",
         termguicolors = true,
       },
       g = { -- vim.g.<key>
