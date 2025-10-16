@@ -76,3 +76,4 @@ zmodule ptavares/zsh-kubectx
 zmodule yhlooo/zsh-kubeconfig-mgr
 zmodule joke/zim-chezmoi
 zmodule wintermi/zsh-mise
+zmodule ptavares/zsh-direnv
