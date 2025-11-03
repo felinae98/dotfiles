@@ -2,6 +2,7 @@
 return {
   "edolphin-ydf/goimpl.nvim",
   lazy = true,
+  enabled = false,
   specs = {
     {
       "nvim-telescope/telescope.nvim",
