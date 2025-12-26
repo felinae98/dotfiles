@@ -7,9 +7,7 @@ Host aur.archlinux.org
 Host github.com
   User git
   Port 443
-{{- if .proxy }}
   HostName ssh.github.com
+{{- if .proxy }}
   ProxyCommand nc -v -X 5 -x ${PROXY_HOST:-127.0.0.1}:${PROXY_PORT:-7893} %h %p
-{{- else }}
-  HostName 20.200.245.248
 {{- end }}
