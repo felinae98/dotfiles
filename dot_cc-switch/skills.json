@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "syncMethod": "auto",
+  "repos": [
+    {
+      "owner": "anthropics",
+      "name": "skills",
+      "branch": "main",
+      "enabled": true,
+      "skillsPath": null
+    },
+    {
+      "owner": "ComposioHQ",
+      "name": "awesome-claude-skills",
+      "branch": "master",
+      "enabled": true,
+      "skillsPath": null
+    },
+    {
+      "owner": "cexll",
+      "name": "myclaude",
+      "branch": "master",
+      "enabled": true,
+      "skillsPath": "skills"
+    },
+    {
+      "owner": "JimLiu",
+      "name": "baoyu-skills",
+      "branch": "main",
+      "enabled": true,
+      "skillsPath": null
+    }
+  ],
+  "skills": {},
+  "ssotMigrationPending": false
+}
