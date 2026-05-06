@@ -4,4 +4,4 @@
 
 local map = LazyVim.safe_keymap_set
 
-map({ "n" }, "<leader>cL", "<cmd>LspRestart<cr>", { desc = "Restart LSP" })
+map({ "n" }, "<leader>cL", "<cmd>lsp restart<cr>", { desc = "Restart LSP" })
