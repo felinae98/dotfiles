@@ -3,7 +3,7 @@
 	name = felinae98
 	signingkey = A531140D1269FC17AC3E678500C8B010587FF610
 [commit]
-	gpgsign = true
+	gpgSign = false
 [core]
 	quotepath = false
 [url "ssh://git@github.com"]
