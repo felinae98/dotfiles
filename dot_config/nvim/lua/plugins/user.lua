@@ -1,38 +1,74 @@
+---@type LazySpec
 return {
-  {
-    "wakatime/vim-wakatime",
-    lazy = false,
-  },
+  { "wakatime/vim-wakatime", lazy = false },
+
+  { "max397574/better-escape.nvim", enabled = false },
+
   {
     "afonsofrancof/worktrees.nvim",
     event = "VeryLazy",
     opts = {
-      -- Specify where to create worktrees relative to git common dir
-      -- The common dir is the .git dir in a normal repo or the root dir of a bare repo
       base_path = "..", -- Parent directory of common dir
-
-      -- Template for worktree folder names (string or function(branch) -> path)
-      -- This is only used if you don't specify the folder name when creating the worktree
-      path_template = "{branch}", -- Default: use branch name
-
-      -- Command names (optional)
+      path_template = "{branch}",
       commands = {
         create = "WorktreeCreate",
         delete = "WorktreeDelete",
         switch = "WorktreeSwitch",
       },
-
-      -- Key mappings for interactive UI (optional)
       mappings = {
         create = "<leader>gwc",
         delete = "<leader>gwd",
         switch = "<leader>gws",
       },
+    },
+  },
 
-      -- Lifecycle hooks (optional)
-      on_create = function(path) end,
-      on_delete = function(path) end,
-      on_switch = function(from_path, to_path) end,
+  {
+    "fang2hou/go-impl.nvim",
+    ft = "go",
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+      "nvim-lua/plenary.nvim",
+      "folke/snacks.nvim",
+    },
+    opts = {},
+  },
+
+  {
+    "leoluz/nvim-dap-go",
+    opts = function(_, opts)
+      opts.dap_configurations = {
+        {
+          type = "go",
+          name = "Debug test (go.mod & Build Flags)",
+          request = "launch",
+          mode = "test",
+          program = "./${relativeFileDirname}",
+          buildFlags = require("dap-go").get_build_flags,
+        },
+      }
+    end,
+  },
+
+  {
+    "folke/snacks.nvim",
+    opts = {
+      picker = {
+        win = {
+          input = {
+            keys = {
+              ["<C-h>"] = { "toggle_hidden", mode = { "i", "n" } },
+              ["<C-g>"] = { "toggle_ignored", mode = { "i", "n" } },
+            },
+          },
+          list = {
+            keys = {
+              ["<C-h>"] = "toggle_hidden",
+              ["<C-g>"] = "toggle_ignored",
+            },
+          },
+        },
+      },
     },
   },
 }
