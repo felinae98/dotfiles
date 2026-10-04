@@ -4,6 +4,12 @@ return {
 
   { "max397574/better-escape.nvim", enabled = false },
 
+  -- <C-Space> is used for input method switching; <C-n> / <Tab> still open the menu
+  {
+    "Saghen/blink.cmp",
+    opts = { keymap = { ["<C-Space>"] = false } },
+  },
+
   {
     "afonsofrancof/worktrees.nvim",
     event = "VeryLazy",
